@@ -11,13 +11,16 @@ import java.util.*;
  * @author carlo
  */
 class Pagina{
+    //ATRIBUTOS DE INSTANCIA
     private String contenido;
     private int numero;
+    //CONSTRUCCTOR CON PARAMETROS
 
     public Pagina(String contenido, int numero) {
         this.contenido = contenido;
         this.numero = numero;
     }
+    //METODOS DE INSTANCIA
 
     public String getContenido() {
         return contenido;
@@ -36,19 +39,25 @@ class Pagina{
     }
 }
 class Libro{
+    //ATRIBUTOS
     private String titulo;
     private long isbn;
     private String autor;
     private int anioPublicacion;
-    
+    //ATRIBUTOS REPRESENTANDO LA RELACIÓN DE COMPOSICIÓN
     private Pagina[] paginas;
     private int numeroPaginas;
 
+    //CONSTRUCTOR
     public Libro(String titulo, long isbn, String autor, int anioPublicacion) {
         this.titulo = titulo;
         this.isbn = isbn;
         this.autor = autor;
+        this.anioPublicacion = anioPublicacion;
+        
+        //RESERVAMOS ESPACIO EN MEMORIA PARA EL OBJETO "array"
         this.paginas=new Pagina[999];
+        //RESERVAMOS ESPACIO EN MEMORIA PARA LAS Páginas
         for(int i=0;i<999;i++){
             this.paginas[i]=new Pagina("",0);
         }
@@ -85,7 +94,7 @@ class Libro{
     public void setAnioPublicacion(int nuevo_anioPublicacion) {
         this.anioPublicacion =nuevo_anioPublicacion;
     }
-
+    //MÉTODOS PARA TRABAJAR CON LA CLASE DE COMPOSICIÓN
     public int getNumeroPaginas() {
         return this.numeroPaginas;
     }
