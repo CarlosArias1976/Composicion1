@@ -98,7 +98,7 @@ class Libro{
     public int getNumeroPaginas() {
         return this.numeroPaginas;
     }
-    public void AñadirPagina(Pagina nueva_Pagina){
+    public void AniadirPagina(Pagina nueva_Pagina){
         if(this.numeroPaginas<999){
             this.paginas[this.numeroPaginas]=nueva_Pagina;
             this.numeroPaginas++;
@@ -150,10 +150,10 @@ public class Composicion1 {
         System.out.println("El libro: "+Controles_Instrumentos.getTitulo());
         System.out.println("Isbn: "+Controles_Instrumentos.getIsbn());
         System.out.println("Autor: "+Controles_Instrumentos.getAutor());
-        System.out.println("Fecha Publicación: "+
-                Controles_Instrumentos.getAnioPublicacion());
-        Controles_Instrumentos.AñadirPagina(pagina1);
-        Controles_Instrumentos.AñadirPagina(pagina2);
+        System.out.println("Fecha Publicación: "+Controles_Instrumentos.getAnioPublicacion());
+        
+        Controles_Instrumentos.AniadirPagina(pagina1);
+        Controles_Instrumentos.AniadirPagina(pagina2);
         Controles_Instrumentos.CorreccionBaseDatos();
         }
     
